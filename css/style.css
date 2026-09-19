@@ -1,0 +1,240 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --navy: #0F2438;
+  --charcoal: #1C1C1C;
+  --green: #2E8B57;
+  --green-dark: #256e46;
+  --white: #FFFFFF;
+  --grey-bg: #F5F6F8;
+  --grey-border: #E2E5EA;
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  line-height: 1.6;
+  background: var(--white);
+}
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.btn-primary { background: var(--green); color: var(--white); }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-secondary { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+.btn-secondary:hover { background: var(--navy); color: var(--white); }
+.btn-whatsapp { background: #25D366; color: var(--white); }
+
+/* ===== HEADER ===== */
+.site-header {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+.main-nav { display: flex; gap: 24px; }
+.main-nav a { color: var(--white); font-size: 0.92rem; opacity: 0.9; }
+.main-nav a:hover { opacity: 1; text-decoration: underline; }
+
+/* ===== HERO ===== */
+.hero { padding: 72px 0; background: var(--white); }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.hero-sub { font-size: 1.05rem; color: #4A5568; margin-bottom: 28px; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ===== IMAGE PLACEHOLDER (remove once real photos are added) ===== */
+.image-placeholder {
+  background: var(--grey-bg);
+  border: 1.5px dashed var(--grey-border);
+  color: #8A93A3;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  min-height: 200px;
+  padding: 16px;
+}
+.hero-image .image-placeholder { min-height: 320px; }
+
+/* ===== TRUST STRIP ===== */
+.trust-strip { background: var(--grey-bg); padding: 18px 0; }
+.trust-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ===== GENERIC SECTION ===== */
+.section { padding: 64px 0; }
+.section h2 {
+  font-size: 1.9rem;
+  color: var(--navy);
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+.alt-bg { background: var(--grey-bg); }
+
+/* ===== CATEGORY CARDS ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.category-card {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.category-card .image-placeholder { margin-bottom: 16px; min-height: 160px; }
+.category-card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 8px; }
+.category-card p { font-size: 0.92rem; color: #4A5568; margin-bottom: 14px; }
+.link-arrow { color: var(--green); font-weight: 600; font-size: 0.9rem; }
+.link-arrow:hover { text-decoration: underline; }
+
+/* ===== TAG GRID (applications, capabilities, industries, why) ===== */
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tag-grid span {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.capabilities .tag-grid span,
+.why .tag-grid span { background: var(--grey-bg); }
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* ===== QUOTE CTA ===== */
+.quote-cta { background: var(--navy); }
+.quote-cta h2, .quote-cta p { color: var(--white); }
+.quote-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer { background: var(--charcoal); color: #C9CDD3; padding: 48px 0 24px; }
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.site-footer .logo { color: var(--white); margin-bottom: 8px; display: block; }
+.site-footer a { display: block; color: #C9CDD3; margin-bottom: 8px; font-size: 0.9rem; }
+.site-footer a:hover { color: var(--white); }
+.footer-bottom {
+  text-align: center;
+  font-size: 0.82rem;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+/* ===== PRODUCTS PAGE ===== */
+.page-intro {
+  background: var(--navy);
+  padding: 56px 0 40px;
+}
+.page-intro h1 { color: var(--white); font-size: 2.2rem; margin-bottom: 12px; }
+.page-intro .hero-sub { color: #C9D3DC; max-width: 640px; }
+
+.category-header { max-width: 640px; margin-bottom: 32px; }
+.category-header p { color: #4A5568; margin-top: 8px; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.product-item h4 { font-size: 1rem; color: var(--navy); margin: 12px 0 4px; }
+.product-item p { font-size: 0.85rem; color: #4A5568; }
+.product-item .image-placeholder { min-height: 130px; }
+
+.material-note {
+  font-size: 0.85rem;
+  color: #6B7280;
+  font-style: italic;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .main-nav { display: none; } /* mobile menu added in a later stage */
+  .hero-inner { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
+  .hero-text h1 { font-size: 1.9rem; }
+}
