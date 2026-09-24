@@ -35,16 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  // Demo enquiry form -> email draft
-  document.querySelectorAll('#contact-form').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const subject = encodeURIComponent('PACKVERSE Enquiry - ' + (data.get('requirement') || 'Packaging'));
-      const body = encodeURIComponent(
-        `Name: ${data.get('name')}\nCompany: ${data.get('company') || '-'}\nEmail: ${data.get('email')}\nRequirement: ${data.get('requirement')}\n\nDetails:\n${data.get('message')}`
-      );
-      window.location.href = `mailto:packversepacking@gmail.com?subject=${subject}&body=${body}`;
-    });
-  });
 });
